@@ -3,7 +3,7 @@ import { configDotenv } from "dotenv";
 import { mongoose } from "mongoose";
 const URI = process.env.MONGOD;
 
-export function ConnectBdd() {
+export default function ConnectBdd() {
   mongoose
     .connect(URI)
     .then(() => {
@@ -14,3 +14,5 @@ export function ConnectBdd() {
       console.log("Err lors de connexion a la base de donnée");
     });
 }
+
+

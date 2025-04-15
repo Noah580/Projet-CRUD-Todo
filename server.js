@@ -3,7 +3,8 @@ import "dotenv/config";
 import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
-import { ConnectBdd } from "./config/Bdd.js";
+import ConnectBdd from "./config/Bdd.js";
+import Routes from "./routes/Routes.js";
 
 const app = express();
 const __filename = fileURLToPath(import.meta.url);
@@ -17,6 +18,8 @@ const PORT = process.env.PORT;
 app.get("/Welcome", (req, res) => {
   res.sendFile(path.join(__dirname, "public/pages/index.html"));
 });
+
+app.use("/api", Routes());
 
 app.listen(PORT, (req, res) => {
   console.log(`le server est lancée: ${PORT}`);
