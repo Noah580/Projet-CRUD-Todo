@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: beige;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3px;
+}
+
+.todo {
+  display: flex;
+  background-color: white;
+  width: 600px;
+  justify-content: space-around;
+  height: auto;
+  margin-left: 5px;
+  padding: 16px;
+  border-radius: 8px;
+  border-color: black;
+  border: 1px solid;
+}
+
+.todo > input {
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.todo > button {
+  padding: 12px;
+  border-radius: 5px;
+  background-color: red;
+  border: none;
+  font-size: 25px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.TodoList {
+  background-color: white;
+  color: black;
+  font-size: 18px;
+  margin-left: 3px;
+  width: auto;
+  height: auto;
+  flex-direction: column;
+}
