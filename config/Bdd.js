@@ -14,5 +14,3 @@ export default function ConnectBdd() {
       console.log("Err lors de connexion a la base de donnée");
     });
 }
-
-

@@ -20,3 +20,19 @@ export const CreateTask = async (req, res) => {
     res.status(201).json({ message: "Nouvelle tâche crée", task: NewTask });
   }
 };
+
+export const ReadTask = async (req, res) => {
+  try {
+    const readTask = await Tasks.find();
+
+    if (readTask) {
+      console.log("Voici toutes les tâche");
+      res
+        .status(201)
+        .json({ message: "Voici toutes les tâche déja crée", tâche: readTask });
+    }
+  } catch (error) {
+    console.log(error);
+    res.status(409).json({ message: "Err lors des chargement des tâche" });
+  }
+};
